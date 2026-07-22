@@ -23,4 +23,30 @@ class Solution:
         return(count == counts)             
 
 
+#1480. Running Sum of 1d Array
 
+
+class Solution:
+    def runningSum(self, nums: List[int]) -> List[int]:
+        count = []
+        total = 0
+
+        for i in range(len(nums)):
+            total = total + nums[i]
+            count.append(total)
+        return count    
+    
+
+ #724. Find Pivot Index
+
+   class Solution:
+    def pivotIndex(self, nums: List[int]) -> int:
+        total = sum(nums)
+        left = 0
+
+        for i in range(len(nums)):
+            right = total - left - nums[i]
+            if left == right:
+                return i
+            left = left + nums[i]
+        return -1       
