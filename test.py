@@ -1,3 +1,3 @@
-age = input("What is your age? ")
-next_year = age + 1
-print(f"Next year you'll be {next_year}")
+nums = [10, 20, 30]
+nums[3] = 99
+print(nums)
